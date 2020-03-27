@@ -1,4 +1,4 @@
-<div class="teste">Teste</div>
+<div class="titulo">Teste</div>
 
 <?php
 echo("Olá Mundo!!");
