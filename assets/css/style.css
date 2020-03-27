@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:400,500,600,700,800&display=swap');
+
+*{
+    font-family: 'Baloo 2', cursive;
+    box-sizing: border-box; /*O border-box leva em cosideração o conteudo a borada o padding e a margin (tudo nessa ordem)*/
+    /* margin: 0;
+    padding: 0; */
+}
+
+body{
+    height: 100vh; /*Vai usar 100% do negocio*/
+    margin: 0px;
+    display: grid; /*Definir linha e colunas e colocar o conteudo nessas linhas*/
+    grid-template-rows: 120px 1fr 60px; /*3 linhas e 1 coluna*/
+    grid-template-columns: 1fr; /*Vai ocupar a tela em 100%*/
+    grid-template-areas: "cabecalho" "principal" "rodape";
+}
+
+.cabecalho{
+    grid-area: cabecalho;
+    background-color: rgb(250, 191, 168);
+    color: rgb(126, 126, 126);
+    display: flex; /*Não entendi ainda*/
+    flex-direction: column; /*Alinhar o eixo principal com a coluna no caso do jsutify, ele faz com que os elementos fiquem no final da página*/
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.75);
+}
+.cabecalho > h1{
+    margin: 0;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+
+.cabecalho > h2{
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.principal{
+    grid-area: principal;
+    height: calc(100vh - 180px); /*Tamanho da área menos o header e o footer*/
+    background-color: rgb(238, 237, 237)/*rgb(185, 71, 71)*/;
+    
+    padding: 20px;
+}
+.conteudo{
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+}
+
+.rodape{
+    grid-area: rodape;
+    background-color: rgb(250, 191, 168);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    color: rgb(126, 126, 126);
+    /* position: sticky;  bottom: 0px; */ /*MAnter o rodape parado conforme o conteudo do principal*/
+}
+
+
+/*Modulos*/
+
+.modulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modulo{
+    flex-basis: 32%; /*Diz qual o tamanho aquele elemento vai ter, o tamanho que cada elemento vai ocupar da porcentagem da tela*/
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.modulo > h3{
+    margin: 0px;
+    color: rgb(126, 126, 126);
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding:  10px 20px;
+    background-color: rgb(250, 191, 168);
+}
+
+.modulo > ul{
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+
+.modulo > ul > li{
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modulo > ul > li > a{
+    display: flex;
+    text-decoration: none;
+    color: rgb(170, 74, 74);
+}
+
+.modulo > ul > li:hover{
+    background-color: #EEE;
+    opacity: 5;
+}
+
+
+/*-------------------Cores-------------------*/
+
+/*1 a 3 Rosa*/
+.modulo.blanched{ border: 2px solid rgb(255, 193, 216);}
+.modulo.blanched > h3{ background-color: rgb(255, 193, 216);}
+
+.modulo.bisque{ border: 2px solid rgb(255, 215, 225);}
+.modulo.bisque > h3{ background-color: rgb(255, 215, 225);}
+
+.modulo.pink{ border: 2px solid rgb(255, 200, 200);}
+.modulo.pink > h3{ background-color: rgb(255, 222, 209);}
+
+
+/*4 a 6 verde*/
+.modulo.paleg{ border: 2px solid PaleGreen;}
+.modulo.paleg > h3{ background-color: PaleGreen;}
+
+.modulo.light{ border: 2px solid LightGreen;}
+.modulo.light > h3{ background-color: rgb(187, 250, 187); }
+
+.modulo.green{ border: 2px solid rgb(166, 223, 166);}
+.modulo.green > h3{ background-color: rgb(125, 250, 169); }
+
+
+ /*7 a 9 Azul*/
+.modulo.paleb{ border: 2px solid PaleTurquoise;}
+.modulo.paleb > h3{ background-color: PaleTurquoise; }
+
+.modulo.powder{ border: 2px solid PowderBlue;}
+.modulo.powder > h3{ background-color: PowderBlue; }
+
+.modulo.sky{ border: 2px solid #87CEEB;}
+.modulo.sky > h3{ background-color: #87CEEB;}
