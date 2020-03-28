@@ -44,7 +44,6 @@ body{
     grid-area: principal;
     height: calc(100vh - 180px); /*Tamanho da área menos o header e o footer*/
     background-color: rgb(238, 237, 237)/*rgb(185, 71, 71)*/;
-    
     padding: 20px;
 }
 .conteudo{
@@ -112,7 +111,7 @@ body{
 
 .modulo > ul > li:hover{
     background-color: #EEE;
-    opacity: 5;
+    border-radius: 5px;
 }
 
 
