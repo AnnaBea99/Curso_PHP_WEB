@@ -15,7 +15,7 @@
     </header>
 
     <nav class="navegacao">
-        <a href=<?= "{$_GET['file']}/{$_GET['file']}.php" ?> class="rosa">Sem Formatação</a>
+        <a href=<?= "{$_GET['dir']}/{$_GET['file']}.php" ?> class="rosa">Sem Formatação</a>
         <a href="index.php" class="rosa">Voltar</a>
     </nav>
 
@@ -25,7 +25,7 @@
         /*include("teste/teste.php")*/  /*Lê o arquivo e coloca ele lá na página*/
         /*Utilazando um parametro para chamar a página*/
         // include($_GET['dir'] . "/" . $_GET ['file'] . ".php");
-       include(__DIR__ . "/{$_GET['file']}/{$_GET['file']}.php");
+       include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
         ?>
         </div>
     </main>

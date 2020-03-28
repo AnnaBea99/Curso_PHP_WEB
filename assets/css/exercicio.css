@@ -20,8 +20,8 @@ body.exercicio {
 }
 
 .navegacao > a{
-    text-decoration: none;
-    color: rgb(126, 126, 126);
+    text-decoration: underline;
+    color: rgb(148, 28, 28);
     font-weight: 300;
     font-size: 1.3rem;
     background-color: rgb(250, 191, 168);
@@ -30,10 +30,10 @@ body.exercicio {
     border-radius: 5px;
 }
 
-.navegacao > a.rosa{ background-color: LightPink;}
+.navegacao > a.rosa{ background-color: lightpink;}
 
 .conteudo{
-    font-size: 2rem;
+    font-size: 2rem;  
 }
 
 .conteudo > .titulo{
